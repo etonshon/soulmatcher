@@ -1,0 +1,298 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote result
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+        <h1>
+            Interests/Beliefs
+        </h1>
+    </div>
+    <div data-toggle="buttons">
+		<form name = "1">
+			<h4>How would you describe your type of humor?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q1" value="dark">Dark</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q1" value="light">Light</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q1" value="nonexistent">Nonexistent</label>
+		</form>
+		<form name = "2">
+			<h4> Do you love the outdoors (Hiking, Kayaking, Taking Nature Walks, Birdwatching, Communicating with Animals, etc.)?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q2" value="yes">Yes</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q2" value="no">No</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q2" value="animals">I only communicate with animals</label>
+		</form>
+		<form name = "3">
+			<h4> Ideal living environment</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q3" value="urban">Urban</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q3" value="suburban">Suburban</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q3" value="rural">Rural</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q3" value="pacificocean">Bottom of the Pacific Ocean</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q3" value="faraway">Far Far Away… I need to get out of this country!</label>
+		</form>
+		<div>
+            <h4>Favorite music genre</h4>
+		    <form action="/interests" method="post">
+		        <div class="form-group">
+		            <select class="form-control" name="sport">
+		                <option disabled selected value> </option></option>
+		                <option value="pop">Pop</option>
+		                <option value="hiphop">Hip Hop</option>
+		                <option value="trap">Trap</option>
+		                <option value="classical">Classical</option>
+		                <option value="musicaltheatre">Musical Theatre</option>
+		                <option value="jazz">Jazz</option>
+		                <option value="rock">Rock</option>
+		                <option value="folk">Folk</option>
+		                <option value="heavymetal">Heavy Metal</option>
+		                <option value="country">Country</option>
+		                <option value="blues">Blues</option>
+		                <option value="soul">Soul</option>
+		                <option value="reggae">Reggae</option>
+		                <option value="funk">Funk</option>
+		                <option value="indie">Indie</option>
+		                <option value="alternatives">Alternative</option>
+		                <option value="edm">EDM</option>
+		                <option value="kpop">KPop</option>
+		                <option value="gospel">Gospel</option>
+		                <option value="christiancontemporary">Christian Contemporary</option>
+		                <option value="other">Other</option>
+		            </select>
+		        </div>
+		    </form>
+		</div>
+		<form name = "5">
+			<h4>What is your reaction to this musical selection?</h4>
+			<audio src="/static/clairdelune.mp3"controls></audio>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q4" value="beautiful">This is beautiful</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q4" value="sleepy">This makes me sleepy</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q4" value="classical">I really don’t like classical music…</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q4" value="know">I know this piece inside and out, love it</label>
+		</form>
+		<form name = "6">
+			<h4>What is your reaction to this musical selection?</h4>
+			<audio src="/static/closer.mp3"controls></audio>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q6" value="myjam">My Jam… This is my type of music</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q6" value="overplayed">SOOOOO OVERPLAYEDDDDD</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q6" value="cantstand">I actually can’t stand this song… Please stop</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q6" value="chainsmokers">I LOVE THE CHAINSMOKERS</label>
+		</form>
+		<form name = "7">
+			<h4>What is your reaction to this musical selection?</h4>
+			<audio src="/static/maadcity.mp3"controls></audio>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q7" value="bop">I can bop to this</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q7" value="go">LET’S GOOOO… Love Kendrick</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q7" value="what">What is going on…</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q7" value="never">I never listen to this type of music</label>
+		</form>
+		<form name = "8">
+			<h4>What is your reaction to this musical selection?</h4>
+			<audio src="/static/everythinginitsrightplace.mp3"controls></audio>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="weird">This is so weird…</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="cool">This is cool</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="interesting">This is interesting… I like exploring different genres of music and I think it takes time to adjust to different styles</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="lovethis">Love this. Radiohead is awesome, inspirational, and so influential</label>
+		</form>
+		<form name = "9">
+			<h4>Do you consider yourself to be athletic?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="yes">Yes</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="kindof">Kind of</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="no">No</label>
+		</form>
+		<form name = "10">
+			<h4>Are you a sports fan?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="yes">Yes</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="kindof">Kind of</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="no">No</label>
+		</form>
+		<div>
+            <h4>What is your favorite sport to watch/play (of these)?</h4>
+		    <form action="/interests" method="post">
+		        <div class="form-group">
+		            <select class="form-control" name="sport">
+		                <option disabled selected value> </option></option>
+		                <option value="football">Football</option>
+		                <option value="basketball">Basketball</option>
+		                <option value="soccer">Soccer</option>
+		                <option value="baseball">Baseball</option>
+		                <option value="boxing">Boxing</option>
+		                <option value="hockey">Hockey</option>
+		                <option value="volleyball">Volleyball</option>
+		                <option value="tennis">Tennis</option>
+		                <option value="golf">Golf</option>
+		                <option value="pingpong">Ping Pong</option>
+		                <option value="no">I just don’t like sports</option>
+		            </select>
+		        </div>
+		    </form>
+		</div>
+		<form name = "13">
+			<h4>Ideal First Date (of these)</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="movie">Movie</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="fancyrestaurant">Fancy restaurant</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="fastfood">Fast food</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="party">Party</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="goonahike">Go on a hike</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="exploreacity">Explore a City</label>
+		</form>
+		<div>
+            <h4>How many kids do you want?</h4>
+		    <form action="/interests" method="post">
+		        <div class="form-group">
+		            <select class="form-control" name="sport">
+		                <option disabled selected value> </option></option>
+		                <option value="0">0</option>
+		                <option value="1">1</option>
+		                <option value="2">2</option>
+		                <option value="3">3</option>
+		                <option value="4">4</option>
+		                <option value="5">5</option>
+		                <option value="6+">6+</option>
+		            </select>
+		        </div>
+		    </form>
+		</div>
+		<div>
+            <h4>What is your religious affiliation?</h4>
+		    <form action="/interests" method="post">
+		        <div class="form-group">
+		            <select class="form-control" name="sport">
+		                <option disabled selected value> </option></option>
+		                <option value="christianity">Christianity</option>
+		                <option value="islam">Islam</option>
+		                <option value="hinduism">Hinduism</option>
+		                <option value="buddhism">Buddhism</option>
+		                <option value="judaism">Judaism</option>
+		                <option value="agnostic">Agnostic</option>
+		                <option value="atheist">Atheist</option>
+		                <option value="other">Other</option>
+		                <option value="none">None</option>
+		            </select>
+		        </div>
+		    </form>
+		</div>
+		<form name = "16">
+			<h4>How serious are you about your religion?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="notreally">Not really at all</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="kindofserious">Kind of serious</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="veryserious">Very serious</label>
+		</form>
+		<div>
+            <h4>How educated do you plan on being/are you?</h4>
+		    <form action="/interests" method="post">
+		        <div class="form-group">
+		            <select class="form-control" name="17">
+		                <option disabled selected value> </option></option>
+		                <option value="dropout">Dropout ASAP</option>
+		                <option value="highschool">High School Diploma</option>
+		                <option value="college">Graduate from College</option>
+		                <option value="masters">Masters</option>
+		                <option value="doctorate">Doctorate (PhD, MD, etc.)</option>
+		            </select>
+		        </div>
+		    </form>
+		</div>
+		<form name = "18">
+			<h4>How important do you value your education?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="important">Education is important, but not the most important thing in life</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="key">Education is the key to success</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="mostimportant">Education is the most important thing in life</label>
+		</form>
+		<form name = "19">
+			<h4>Do you believe in love at first sight?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="yes">Yes</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="no">No</label>
+		</form>
+		<form name = "20">
+			<h4>Which do you most believe?</h4>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="lovelove">Love is love</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="complicated">Love is complicated</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="hard">Love is hard</label>
+			<label class="element-animation1 btn btn-lg btn-primary btn-block"><input type="radio" name="q8" value="idk">I don’t know if I can find love</label>
+		</form>
+	</div>
+	<button>Next</button>
+	<div id="values">
+		<form action="/interests" method="post">
+			<input id="val" name="result" type="hidden" value="">
+			<button class="btn btn-primary" type="submit">Find out your type!</button>
+		</form>
+	</div>
+	<script>
+	    var check1 = document.getElementsByName("q1");
+		var check2 = document.getElementsByName("q2");
+		var check3 = document.getElementsByName("q3");
+		var check4 = document.getElementsByName("q4");
+		var check5 = document.getElementsByName("q5");
+		var check6 = document.getElementsByName("q6");
+		var check7 = document.getElementsByName("q7");
+		var check8 = document.getElementsByName("q8");
+		let i1 = 0;
+    	let i2 = 0;
+    	let i3 = 0;
+    	let i4 = 0;
+    	let i5 = 0;
+    	let i6 = 0;
+    	let i7 = 0;
+    	let i8 = 0;
+    	let q1v = 0;
+    	let q2v = 0;
+    	let q3v = 0;
+    	let q4v = 0;
+    	let q5v = 0;
+    	let q6v = 0;
+    	let q7v = 0;
+    	let q8v = 0;
+		while (i1<check1.length) {
+			if (check1[i1].checked) {
+				q1v = check1[i1].value;
+			}
+			i1++;
+		}
+		while (i2<check2.length) {
+			if (check2[i2].checked) {
+				q2v = check2[i2].value;
+			}
+			i2++;
+		}
+		while (i3<check3.length) {
+			if (check3[i3].checked) {
+				q3v = check3[i3].value;
+			}
+			i3++;
+		}
+		while (i4<check4.length) {
+			if (check4[i4].checked) {
+				q4v = check4[i4].value;
+			}
+			i4++;
+		}
+		while (i5<check5.length) {
+			if (check5[i5].checked) {
+				q5v = check5[i5].value;
+			}
+			i5++;
+		}
+		while (i6<check6.length) {
+			if (check6[i6].checked) {
+				q6v = check6[i6].value;
+			}
+			i6++;
+		}
+		while (i7<check7.length) {
+			if (check7[i7].checked) {
+				q7v = check7[i7].value;
+			}
+			i7++;
+		}
+		while (i8<check8.length) {
+			if (check8[i8].checked) {
+				q8v = check8[i8].value;
+			}
+			i8++;
+		}
+
+	</script>
+
+{% endblock %}
