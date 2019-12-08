@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <style>
+        body {
+            background-image: url(https://media.giphy.com/media/7GHRDluBmx9O8/giphy.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+
+        .example_c {
+        color: #494949;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 20px;
+        border: 4px solid #494949;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+        }
+
+        .example_c:hover {
+        color: #ffffff;
+        background: #f6b93b;
+        border-color: #f6b93b;
+        transition: all 0.4s ease 0s;
+        }
+        </style>
+
+
+        <!--Button found https://www.fabriziovanmarciano.com/button-styles/-->
+    <form action="/start" method="post">
+        <div align="center">
+            <input type="hidden">
+            <button name="start" value = "start" class="example_c" type="submit">Begin Your Quest</button>
+        </div>
+    </form>
+
+
+{% endblock %}
